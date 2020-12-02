@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
 import sys
-import itertools
-import math
+from itertools import combinations
+from math import prod
 
 def main(input_file, combo_length):
-    input = [int(elem) for elem in open(input_file, 'r').read().splitlines()]
-    for combo in itertools.combinations(input, combo_length):
+    input = [int(x) for x in open(input_file).read().split()]
+    for combo in combinations(input, combo_length):
         if sum(combo) == 2020:
-            print(math.prod(combo))
+            print(prod(combo))
             sys.exit(0)
 
 if __name__ == '__main__':
