@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import pdb
 import re
 import sys
 from collections import Counter
